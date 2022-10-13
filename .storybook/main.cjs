@@ -20,7 +20,7 @@ module.exports = {
   },
   viteFinal: (config, { configType }) => {
     if (configType === "PRODUCTION") {
-      config.base = "/dmchk-ignite-lab-3/";
+      config.base = "/dmchk-ignite-lab-3";
     }
 
     return config;
