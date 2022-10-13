@@ -5,7 +5,6 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   asChild?: boolean;
-  className?: string;
 }
 
 export function Button({
@@ -14,7 +13,7 @@ export function Button({
   className,
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : "span";
+  const Comp = asChild ? Slot : "button";
   return (
     <Comp
       className={clsx(
